@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人网页</title>
+    <style>
+        body {
+            background-color: rgb(250, 230, 223);
+        }
+        
+        .header {
+            background-color: #1abc9c;
+            padding: 20px;
+            text-align: center;
+            border-radius: 30px 30px;
+        }
+        
+        @keyframes myfirst {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 100;
+            }
+        }
+        
+        .header h1 {
+            font-family: "微软雅黑";
+            color: white;
+            font-size: 40px;
+            animation: myfirst 2s infinite;
+        }
+        
+        .my {
+            width: 100%;
+            /* border-style: solid; */
+            border-color: black;
+            /* padding: 20px; */
+            margin-top: 20px;
+            background-color: #D2D2D2;
+            border-radius: 30px 30px;
+        }
+        
+        #myWork {
+            text-align: center;
+            font-family: "华文行楷";
+            font-size: 40px;
+            color: rgb(1, 97, 26);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>地信405姚烨辉</h1>
+        <p>WebGis 网页作业</p>
+        <p>学号:2016901924</p>
+        <div id="datetime">
+            <script>
+                setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
+            </script>
+        </div>
+    </div>
+    <div class="my">
+        <p id="myWork">我的视频作品</p>
+        <!-- <br>&nbsp&nbsp -->
+        <video src="回西安啦2.mp4" width="46%" controls="controls" poster="video1.jpg"> </video>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <video src="从你的全世界路过.mp4" controls="controls" width="46%" poster="video2.jpg"></video>
+    </div>
+
+</body>
+
+</html>
