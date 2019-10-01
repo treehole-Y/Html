@@ -44,11 +44,59 @@
             border-radius: 30px 30px;
         }
         
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+        /* 创建两个列 */
+        /* 边栏 */
+        
+        .side {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+        
+        .main {
+            -ms-flex: 65%;
+            /* IE10 */
+            flex: 65%;
+            background-color: white;
+            padding: 20px;
+        }
+        /* 测试图片 */
+        
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+        
         #myWork {
             text-align: center;
             font-family: "华文行楷";
             font-size: 40px;
             color: rgb(1, 97, 26);
+        }
+        
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+        /* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+        
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -62,13 +110,50 @@
             <script>
                 setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
             </script>
+
+        </div>
+        <audio id="ma1" src="bgm.mp3" controls="controls" autoplay="autoplay" preload="auto"></audio>
+
+    </div>
+    <div class="row">
+        <div class="side">
+            <h2>关于我</h2>
+            <h5>我的照片:</h5>
+            <div align="center" style="height:200px;">
+                <img src="2016901924.jpg" height="100%">
+
+            </div>
+            <!-- <p>学号2016901924</p> -->
+            <!-- <h3>更多内容</h3>
+            <p>我的更多内容</p>
+            <div class="fakeimg" style="height:60px;">这边插入图像</div><br>
+            <div class="fakeimg" style="height:60px;">这边插入图像</div><br>
+            <div class="fakeimg" style="height:60px;">这边插入图像</div> -->
+        </div>
+        <div class="main">
+            <h2>摄影作品</h2>
+            <h5>风景类</h5>
+            <div align="center" style="height:200px;">
+                <img src="123.jpg" height="100%"> <img src="2.jpg" height="100%"> <img src="1.jpg" height="100%">
+            </div>
+
+            <p> 那些最终会让你陷进去的，一开始总是美好，无处安放，那遥远的青春!</p>
+
+            <br>
+            <!-- <h2>标题</h2>
+            <h5>副标题</h5>
+            <div class="fakeimg" style="height:200px;">图像</div>
+            <p>一些文本..</p>
+            <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p> -->
         </div>
     </div>
     <div class="my">
         <p id="myWork">我的视频作品</p>
         <!-- <br>&nbsp&nbsp -->
-        <video src="回西安啦2.mp4" width="46%" controls="controls" poster="video1.jpg"preload="auto"> </video>&nbsp&nbsp&nbsp&nbsp&nbsp
-        <video src="从你的全世界路过.mp4" controls="controls" width="46%" poster="video2.jpg"preload="auto"></video>
+        <video id="mv1" src="回西安啦2.mp4" width="46%" controls="controls" poster="video1.jpg" preload="auto"> </video>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <video id="mv2" src="从你的全世界路过.mp4" controls="controls" width="46%" poster="video2.jpg" preload="auto"></video>
+
+
     </div>
 
 </body>
